@@ -1,0 +1,164 @@
+.pip-toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pip-toolbar .field.pip-exercice {
+  margin: 0;
+  min-width: 140px;
+}
+
+.pip-intro {
+  margin: -6px 0 16px;
+  font-size: 13px;
+  color: #5b6577;
+  line-height: 1.45;
+}
+
+/* Montants à 10 chiffres : la carte doit rester lisible sans déborder. */
+.fiop-page .stats-row .stat-value {
+  font-size: 22px;
+  overflow-wrap: anywhere;
+}
+
+.pip-table {
+  font-size: 12.5px;
+}
+
+.pip-table th {
+  white-space: normal;
+  vertical-align: bottom;
+}
+
+.pip-table .num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.pip-table .pip-code {
+  white-space: nowrap;
+}
+
+.pip-table .pip-total {
+  font-weight: 700;
+  color: #123d82;
+}
+
+.pip-table tr.pip-row-niveau1 td {
+  background: #123d82;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.pip-table tr.pip-row-niveau2 td {
+  background: #e8eef8;
+  color: #123d82;
+  font-weight: 700;
+}
+
+.pip-table tr.pip-row-niveau3 td {
+  background: #f4f6f9;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.pip-table tbody tr.pip-row-niveau1:hover td,
+.pip-table tbody tr.pip-row-niveau2:hover td,
+.pip-table tbody tr.pip-row-niveau3:hover td {
+  filter: none;
+}
+
+/* Page de saisie (/pip/nouveau, /pip/:id/modifier) : formulaire à gauche, récapitulatif à droite. */
+.pip-form-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+.pip-form-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.pip-form-main .fiop-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pip-form-main .fiop-card h2 {
+  margin-bottom: 0;
+}
+
+.pip-projet-fixe {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.pip-form-recap {
+  position: sticky;
+  top: 16px;
+}
+
+.pip-form-recap dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  margin: 0 0 18px;
+  font-size: 13px;
+}
+
+.pip-form-recap dt {
+  color: #5b6577;
+}
+
+.pip-form-recap dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: #1e293b;
+}
+
+.pip-form-recap .pip-recap-sous-total {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e6eaf0;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.pip-form-recap .pip-recap-total {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #123d82;
+}
+
+.pip-form-recap .pip-recap-total span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #5b6577;
+}
+
+.pip-recap-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .pip-form-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pip-form-recap {
+    position: static;
+  }
+}

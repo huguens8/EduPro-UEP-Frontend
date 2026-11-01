@@ -1,0 +1,217 @@
+/* Bandeau : même bleu à grille que la page de connexion ; les cartes restent blanches. */
+.app-shell,
+.app-topbar,
+.app-tabs {
+  background-color: #173a78;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Zone de contenu : bleu pâle, même grille en filigrane. */
+.app-shell {
+  min-height: 100vh;
+  background-color: #d6e4f5;
+  background-image:
+    linear-gradient(rgba(23, 58, 120, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 58, 120, 0.06) 1px, transparent 1px);
+  background-attachment: fixed;
+}
+
+.app-topbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-brand-logo {
+  width: auto;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.app-brand h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.app-brand p {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: #c4d8ff;
+}
+
+.app-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logout-btn {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.app-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: sticky;
+  top: 75px;
+  z-index: 10;
+  overflow-x: auto;
+}
+
+.app-tabs-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  padding: 10px 0;
+  position: relative;
+}
+
+.app-tabs-search input {
+  width: 150px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.app-tabs-search input:focus {
+  outline: none;
+  border-color: #f2c14e;
+  box-shadow: 0 0 0 3px rgba(242, 193, 78, 0.3);
+}
+
+.app-tabs-search-error {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  color: #ffb4ab;
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+
+.app-tab {
+  padding: 12px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #c4d8ff;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.app-tab:hover {
+  color: #ffffff;
+}
+
+.app-tab.active {
+  color: #ffffff;
+  border-bottom-color: #f2c14e;
+}
+
+.app-main {
+  min-height: calc(100vh - 112px);
+}
+
+/* Téléphone : la barre du haut peut passer sur deux lignes (nom, rôle, Déconnexion). Elle ne reste
+   donc plus collée en haut : sinon le menu, collé à une hauteur fixe juste en dessous, viendrait la
+   chevaucher. Le menu, lui, reste collé tout en haut ; la recherche passe sur sa propre ligne. */
+@media (max-width: 560px) {
+  .app-topbar {
+    padding: 12px 14px;
+    position: static;
+  }
+
+  .app-brand {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .app-brand-logo {
+    width: auto;
+    height: 44px;
+  }
+
+  .app-brand h1 {
+    font-size: 16px;
+  }
+
+  .app-brand p {
+    font-size: 11.5px;
+  }
+
+  .logout-btn {
+    padding: 7px 12px;
+  }
+
+  .app-tabs {
+    top: 0;
+    padding: 0 8px;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 0;
+  }
+
+  .app-tab {
+    padding: 11px 10px;
+    font-size: 13px;
+  }
+
+  .app-tabs-search {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding: 4px 4px 10px;
+  }
+
+  .app-tabs-search input {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+
+  .app-tabs-search-error {
+    position: static;
+    flex-basis: 100%;
+    margin-top: 0;
+    white-space: normal;
+  }
+}

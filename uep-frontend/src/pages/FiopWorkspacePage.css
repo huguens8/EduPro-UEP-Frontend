@@ -1,0 +1,39 @@
+.workspace-page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.workspace-page-header h1 {
+  margin: 0;
+  font-size: 19px;
+  color: #123d82;
+  font-weight: 700;
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+  .workspace-page-header {
+    gap: 10px;
+  }
+
+  .workspace-page-header h1 {
+    flex-basis: 100%;
+    font-size: 16.5px;
+  }
+}
+
+
+/* Info Générales verrouillée après l'approbation du MPCE. */
+.workspace-verrou-notice {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #123d82;
+  background: #eef4ff;
+  border: 1px solid #c7d7f5;
+  border-radius: 8px;
+}

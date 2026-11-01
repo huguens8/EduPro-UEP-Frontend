@@ -1,0 +1,114 @@
+/* §46 Chronogramme : une case par mois, remplie quand l'activité est planifiée ce mois-là. */
+.chronogramme-table td.chrono-cell {
+  padding: 0;
+  min-width: 44px;
+}
+
+.chrono-cell button,
+.chrono-cell span {
+  display: block;
+  width: 100%;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.chrono-cell span {
+  cursor: default;
+}
+
+.chrono-cell button:hover {
+  background: #e8eef8;
+}
+
+.chrono-cell button:focus-visible {
+  outline: 2px solid #1a56a8;
+  outline-offset: -2px;
+}
+
+.chrono-cell.planifie button,
+.chrono-cell.planifie span {
+  background: #1a56a8;
+}
+
+.chrono-cell.planifie button:hover {
+  background: #123d82;
+}
+
+/* Séparateur vertical entre trimestres, comme les bordures épaisses du canevas. */
+.chronogramme-table .trimestre-debut {
+  border-left: 2px solid #64748b;
+}
+
+.chronogramme-table tfoot td {
+  text-align: center;
+}
+
+/* §47 Voies et moyens : bandeau par rubrique principale, sous-totaux, colonnes texte élargies. */
+.voies-moyens-table .voies-rubrique-row td {
+  background: #dbe4f3;
+  color: #123d82;
+  font-weight: 700;
+  text-align: left;
+}
+
+.voies-moyens-table .voies-sous-total-row td {
+  background: #f1f5f9;
+  font-weight: 700;
+  text-align: right;
+}
+
+.voies-moyens-table .voies-sous-total-row td:first-child {
+  text-align: left;
+}
+
+.voies-moyens-table td select {
+  min-width: 180px;
+  padding: 6px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.voies-moyens-table td.voies-code-cell input {
+  min-width: 90px;
+  text-align: left;
+}
+
+.voies-moyens-table td.voies-designation-cell input {
+  min-width: 200px;
+  text-align: left;
+}
+
+.voies-moyens-table td.voies-ajout-cell {
+  text-align: left;
+}
+
+/* Répartition par source différente du total quantité × coût unitaire. */
+.voies-moyens-table td.voies-ecart,
+.voies-moyens-table td.voies-ecart input {
+  background: #fff4e5;
+}
+
+.voies-moyens-table td.voies-ecart input {
+  border-color: #f0a03c;
+}
+
+.voies-moyens-table tr.voies-ligne-erreur td {
+  background: #fdecec;
+}
+
+/* §§48-50 Calendrier : rubrique principale en bandeau (montants alignés à droite), sous-rubriques en retrait. */
+.calendrier-trimestriel-table .calendrier-principale-row td:not(:first-child) {
+  text-align: right;
+}
+
+.calendrier-trimestriel-table .calendrier-sous-rubrique {
+  padding-left: 24px;
+  font-weight: 500;
+}
+
+.calendrier-trimestriel-table td input {
+  min-width: 110px;
+}

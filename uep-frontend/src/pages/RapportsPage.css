@@ -1,0 +1,61 @@
+.rapport-intro {
+  margin: -6px 0 18px;
+  font-size: 13.5px;
+  color: #5b6577;
+}
+
+.rapport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 20px;
+}
+
+.rapport-carte {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 22px;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  background: #fafbfc;
+}
+
+.rapport-carte h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #123d82;
+}
+
+.rapport-aide {
+  margin: 0;
+  font-size: 13px;
+  color: #5b6577;
+  line-height: 1.45;
+}
+
+.rapport-carte .field select {
+  width: 100%;
+}
+
+.rapport-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.rapport-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 560px) {
+  .rapport-carte {
+    padding: 16px 14px;
+  }
+
+  .rapport-actions button {
+    flex: 1 1 100%;
+  }
+}

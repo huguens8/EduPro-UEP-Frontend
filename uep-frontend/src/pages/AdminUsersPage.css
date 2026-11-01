@@ -1,0 +1,348 @@
+.admin-page {
+  min-height: 100%;
+}
+
+.admin-content {
+  max-width: 1080px;
+  margin: 28px auto 60px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .admin-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-card {
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 14px;
+  padding: 24px 26px;
+  box-shadow: 0 8px 24px rgba(23, 58, 120, 0.12);
+}
+
+.admin-card h2 {
+  margin: 0 0 18px;
+  font-size: 15.5px;
+  color: #123d82;
+  font-weight: 700;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.card-header-row h2 {
+  margin: 0;
+}
+
+.count-pill {
+  background: #eef1f6;
+  color: #5a6b82;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #33415c;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: #1a56a8;
+  box-shadow: 0 0 0 3px rgba(26, 86, 168, 0.15);
+}
+
+.field-error {
+  color: #b3261e;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.form-error {
+  background: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c6c2;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.form-info {
+  background: #fff6e0;
+  color: #7a4f01;
+  border: 1px solid #f3dca0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.form-success {
+  background: #e8f6ec;
+  color: #1e7a3d;
+  border: 1px solid #bfe6cb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.create-user-form button {
+  align-self: flex-start;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #1a56a8;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.create-user-form button:hover:not(:disabled) {
+  background: #123d82;
+}
+
+.create-user-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.users-table-wrap {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.users-table th,
+.users-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.users-table th {
+  color: #94a3b8;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.users-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.user-cell-text {
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-email {
+  font-size: 12.5px;
+  color: #94a3b8;
+  margin-top: 1px;
+}
+
+.self-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1a56a8;
+  background: #e3edff;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.role-administrateur { background: #e3edff; color: #123d82; }
+.role-porteur_projet { background: #e3f7f0; color: #1e7a3d; }
+.role-superviseur_uep { background: #fff4e0; color: #a56600; }
+.role-superviseur_mpce { background: #f1e9ff; color: #6a3fb5; }
+.role-visiteur { background: #e6f4f7; color: #1b6f82; }
+
+.avatar.role-administrateur { background: #123d82; }
+.avatar.role-porteur_projet { background: #1e7a3d; }
+.avatar.role-superviseur_uep { background: #b8790a; }
+.avatar.role-superviseur_mpce { background: #6a3fb5; }
+.avatar.role-visiteur { background: #1b6f82; }
+
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-dot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.status-active { color: #1e7a3d; }
+.status-active::before { background: #1e7a3d; }
+.status-inactive { color: #94a3b8; }
+.status-inactive::before { background: #94a3b8; }
+
+.row-menu-cell {
+  position: relative;
+  text-align: right;
+  width: 40px;
+}
+
+.menu-trigger {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.menu-trigger:hover {
+  background: #eef1f6;
+}
+
+.row-dropdown {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(15, 34, 64, 0.14);
+  min-width: 220px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.row-dropdown button {
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 9px 12px;
+  font-size: 13.5px;
+  color: #33415c;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.row-dropdown button:hover:not(:disabled) {
+  background: #eef1f6;
+}
+
+.row-dropdown button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.row-dropdown .dropdown-danger {
+  color: #b3261e;
+}
+
+.row-dropdown .dropdown-danger:hover:not(:disabled) {
+  background: #fdecea;
+}
+
+.form-hint {
+  margin: 0;
+  font-size: 12.5px;
+  color: #5b6b70;
+}
+
+@media (max-width: 560px) {
+  .admin-content {
+    margin: 16px auto 40px;
+    padding: 0 10px;
+    gap: 14px;
+  }
+
+  .admin-card {
+    padding: 18px 14px;
+  }
+
+  .card-header-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

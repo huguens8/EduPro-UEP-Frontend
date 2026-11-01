@@ -1,0 +1,46 @@
+.transmission-intro {
+  margin: 0 0 12px;
+}
+
+.transmission-recap {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 12px;
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+}
+
+.transmission-recap dt {
+  font-weight: 600;
+  color: #475569;
+}
+
+.transmission-recap dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.transmission-manquant {
+  color: #b91c1c;
+}
+
+.transmission-historique {
+  margin: 4px 0 12px;
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+.transmission-historique h4 {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.transmission-historique ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* Téléchargement à gauche, Annuler / Transmettre à droite. */
+.transmission-telecharger {
+  margin-right: auto;
+}

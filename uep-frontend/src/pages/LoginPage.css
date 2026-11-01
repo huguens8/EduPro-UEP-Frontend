@@ -1,0 +1,207 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+  padding: 24px;
+  background-color: #173a78;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(ellipse at 25% 35%, rgba(70, 130, 230, 0.35), transparent 65%);
+  background-size: 24px 24px, 24px 24px, 100% 100%;
+}
+
+/* Illustration : diagramme de Gantt stylisé */
+.login-hero {
+  flex: 0 1 460px;
+  color: #ffffff;
+}
+
+.login-gantt {
+  position: relative;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+.gantt-bar {
+  position: absolute;
+  height: 10px;
+  border-radius: 3px;
+  opacity: 0;
+  transform-origin: left center;
+  animation: gantt-grow 0.7s ease-out forwards;
+}
+
+.bar-1 { top: 10px;  left: 0;   width: 44%; background: #3d74f0; animation-delay: 0.05s; }
+.bar-2 { top: 40px;  left: 18%; width: 46%; background: #3fb0d6; animation-delay: 0.15s; }
+.bar-3 { top: 70px;  left: 12%; width: 32%; background: #6a8bc0; animation-delay: 0.25s; }
+.bar-4 { top: 100px; left: 36%; width: 58%; background: #3d74f0; animation-delay: 0.35s; }
+.bar-5 { top: 130px; left: 54%; width: 40%; background: #3fb0d6; animation-delay: 0.45s; }
+.bar-6 { top: 160px; left: 6%;  width: 58%; background: #6a8bc0; animation-delay: 0.55s; }
+
+/* Ligne « aujourd'hui » */
+.gantt-today {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 2px dotted #e8b84a;
+  z-index: 1;
+}
+
+.gantt-today::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f2c14e;
+  box-shadow: 0 0 10px rgba(242, 193, 78, 0.7);
+}
+
+@keyframes gantt-grow {
+  from { opacity: 0; transform: scaleX(0); }
+  to   { opacity: 1; transform: scaleX(1); }
+}
+
+.login-hero h2 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 700;
+  max-width: 420px;
+}
+
+.login-hero p {
+  margin: 0;
+  font-size: 14px;
+  color: #c4d8ff;
+}
+
+@media (max-width: 900px) {
+  .login-hero { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gantt-bar { animation: none; opacity: 1; }
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 380px;
+  flex-shrink: 0;
+  box-shadow: 0 24px 60px rgba(8, 25, 60, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-logo {
+  display: block;
+  width: auto;
+  height: 260px;
+  object-fit: contain;
+  margin: 0 auto 16px;
+}
+
+.login-card h1 {
+  margin: 0 0 4px;
+  font-size: 26px;
+  color: #0b2c5e;
+  text-align: center;
+}
+
+.login-subtitle {
+  margin: 0 0 24px;
+  font-size: 13px;
+  color: #5a6b82;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.login-card label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #33415c;
+  margin-bottom: 6px;
+}
+
+.login-card input {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #1a56a8;
+  box-shadow: 0 0 0 3px rgba(26, 86, 168, 0.15);
+}
+
+.login-card .password-input {
+  margin-bottom: 18px;
+}
+
+.login-card .password-input input {
+  margin-bottom: 0;
+}
+
+.login-card button {
+  margin-top: 8px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #1a56a8;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.login-card button:hover:not(:disabled) {
+  background: #123d82;
+}
+
+.login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-error {
+  background: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c6c2;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.login-hint {
+  margin: 20px 0 0;
+  font-size: 12px;
+  color: #8492a6;
+  text-align: center;
+}
+
+.login-card .login-link-btn,
+.login-card .login-link-btn:hover:not(:disabled) {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #123d82;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,174 @@
+.donut-card {
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 24px rgba(23, 58, 120, 0.12);
+}
+
+.donut-card h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #123d82;
+}
+
+.donut-subtitle {
+  margin: 4px 0 18px;
+  font-size: 12.5px;
+  color: #5a6b82;
+}
+
+.donut-empty {
+  margin: 0;
+  font-size: 13.5px;
+  color: #5a6b82;
+}
+
+.donut-error {
+  background: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c6c2;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.donut-body {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.donut-figure {
+  position: relative;
+  flex: 0 0 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.donut-figure svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.donut-arc {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.donut-arc.is-dimmed {
+  opacity: 0.35;
+}
+
+.donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.donut-total {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0b0b0b;
+  line-height: 1.1;
+}
+
+.donut-total-label {
+  font-size: 12px;
+  color: #5a6b82;
+}
+
+.donut-tooltip {
+  position: absolute;
+  transform: translate(12px, 12px);
+  z-index: 2;
+  min-width: 160px;
+  max-width: 240px;
+  background: #ffffff;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 4px 14px rgba(15, 34, 64, 0.12);
+  pointer-events: none;
+  font-size: 12.5px;
+  color: #0b0b0b;
+}
+
+.donut-tooltip-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.donut-tooltip-value {
+  margin-top: 2px;
+  color: #52514e;
+}
+
+.donut-tooltip-detail {
+  margin-top: 4px;
+  color: #52514e;
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+
+.donut-swatch {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.donut-legend {
+  flex: 1;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: #0b0b0b;
+}
+
+.donut-legend th {
+  text-align: left;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #5a6b82;
+  padding: 0 8px 6px;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.donut-legend td {
+  padding: 7px 8px;
+  border-bottom: 1px solid #f1f3f6;
+}
+
+.donut-legend tr.is-active td {
+  background: #f4f7fb;
+}
+
+.donut-legend .num,
+.donut-legend th:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 560px) {
+  .donut-card {
+    padding: 20px;
+  }
+
+  .donut-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .donut-legend {
+    width: 100%;
+  }
+}

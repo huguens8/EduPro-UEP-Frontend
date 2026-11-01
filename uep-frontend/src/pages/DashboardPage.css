@@ -1,0 +1,160 @@
+.dashboard-content {
+  max-width: 1080px;
+  margin: 48px auto 60px;
+  padding: 0 24px;
+}
+
+.home-welcome {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #33415c;
+}
+
+.welcome-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-left: 5px solid #1a56a8;
+  border-radius: 14px;
+  padding: 26px 30px;
+  box-shadow: 0 8px 24px rgba(23, 58, 120, 0.12);
+}
+
+.welcome-card h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: #123d82;
+}
+
+.welcome-card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #5a6b82;
+  line-height: 1.5;
+}
+
+/* Sélecteur d'exercice global, à droite de la carte de bienvenue */
+.dashboard-exercice {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #f1f5fb;
+}
+
+.dashboard-exercice select {
+  font-weight: 600;
+  color: #123d82;
+}
+
+.dashboard-section-title {
+  margin-top: 32px;
+}
+
+.dashboard-section-title h2 {
+  margin: 0;
+  font-size: 19px;
+  color: #123d82;
+}
+
+.dashboard-section-title p {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: #5a6b82;
+}
+
+.dashboard-section-title + .kpi-row {
+  margin-top: 16px;
+}
+
+.dashboard-filters {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.dashboard-filters h2 {
+  margin: 0;
+  font-size: 15px;
+  color: #123d82;
+}
+
+.dashboard-filters p {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: #5a6b82;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 0 20px;
+  align-items: start;
+}
+
+.dashboard-grid.is-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.dashboard-error {
+  margin-top: 20px;
+}
+
+.dashboard-loading {
+  margin: 24px 0 0;
+  font-size: 13.5px;
+  color: #5a6b82;
+}
+
+@media (max-width: 860px) {
+  .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.dashboard-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #33415c;
+}
+
+.dashboard-filter select {
+  min-width: 180px;
+  padding: 7px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0b0b0b;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dashboard-filter select:focus {
+  outline: none;
+  border-color: #1a56a8;
+  box-shadow: 0 0 0 3px rgba(26, 86, 168, 0.15);
+}
+
+@media (max-width: 560px) {
+  .welcome-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 22px;
+  }
+
+  .dashboard-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dashboard-filter select {
+    width: 100%;
+  }
+}

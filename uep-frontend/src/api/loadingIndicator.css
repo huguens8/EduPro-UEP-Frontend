@@ -1,0 +1,53 @@
+/* Bouton en attente de la réponse du serveur : icône qui tourne avant le libellé. */
+button.btn-loading {
+  pointer-events: none;
+  cursor: progress;
+  opacity: 0.85;
+}
+
+button.btn-loading::before {
+  content: '';
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.5em;
+  vertical-align: -0.12em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: api-spin 0.7s linear infinite;
+}
+
+/* Indicateur global (appel de plus de 300 ms, avec ou sans bouton). */
+body.api-busy {
+  cursor: progress;
+}
+
+body.api-busy::after {
+  content: '';
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10000;
+  width: 28px;
+  height: 28px;
+  border: 3px solid #d3dff0;
+  border-top-color: #1a56a8;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(11, 44, 94, 0.15);
+  background: #ffffff;
+  animation: api-spin 0.7s linear infinite;
+}
+
+@keyframes api-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button.btn-loading::before,
+  body.api-busy::after {
+    animation-duration: 2s;
+  }
+}
